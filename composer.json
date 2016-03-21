@@ -1,0 +1,27 @@
+{
+    "name": "sgomez/adldap2-bundle",
+    "description": "Symfony Bundle for adldap2 library.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergio Gómez",
+            "email": "sergio@uco.es"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Sgomez\\Bundle\\Adldap2Bundle\\": "" }
+    },
+    "require": {
+        "php"                           : ">=5.4",
+        "adldap2/adldap2"               : "~5.2",
+        "symfony/config"                : "~2.3|~3.0",
+        "symfony/dependency-injection"  : "~2.3|~3.0",
+        "symfony/http-kernel"           : "~2.3|~3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
