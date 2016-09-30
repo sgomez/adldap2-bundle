@@ -3,7 +3,7 @@
 namespace Sgomez\Bundle\Adldap2Bundle\DependencyInjection;
 
 use Adldap\Adldap;
-use Adldap\Connections\ConnectionInterface;
+use Adldap\Contracts\Connections\ConnectionInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
