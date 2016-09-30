@@ -12,11 +12,15 @@ namespace Sgomez\Bundle\Adldap2Bundle\DependencyInjection;
 
 
 use Adldap\Adldap;
+use Adldap\Connections\Provider;
 
 class Adldap2Factory
 {
-    public function createConnection(array $config, $connectionClass, $autoConnect)
+    public function createConnection(array $config)
     {
-        return new Adldap($config, new $connectionClass, $autoConnect);
+        $ad = new Adldap();
+        $ad->addProvider('default', new Provider($config));
+
+        return $ad;
     }
 }

@@ -17,12 +17,6 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->booleanNode('auto_connect')
-                    ->defaultTrue()
-                ->end()
-                ->scalarNode('connection_class')
-                    ->defaultValue('Adldap\Connections\Ldap')
-                ->end()
                 ->arrayNode('connection_settings')
                     ->children()
                         ->arrayNode('domain_controllers')
@@ -53,9 +47,6 @@ class Configuration implements ConfigurationInterface
                             ->defaultFalse()
                         ->end()
                         ->booleanNode('use_tls')
-                            ->defaultFalse()
-                        ->end()
-                        ->booleanNode('use_sso')
                             ->defaultFalse()
                         ->end()
                     ->end()
