@@ -20,6 +20,7 @@ class Adldap2Factory
     {
         $ad = new Adldap();
         $ad->addProvider('default', new Provider($config));
+        $ad->connect('default');
 
         return $ad;
     }
