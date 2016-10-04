@@ -16,7 +16,7 @@ use Adldap\Connections\Provider;
 
 class Adldap2Factory
 {
-    public function createConnection(array $config)
+    public static function createConnection(array $config)
     {
         $ad = new Adldap();
         $ad->addProvider('default', new Provider($config));
