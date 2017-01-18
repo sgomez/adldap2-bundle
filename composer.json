@@ -13,11 +13,11 @@
         "psr-4": { "Sgomez\\Bundle\\Adldap2Bundle\\": "" }
     },
     "require": {
-        "php"                           : ">=5.4",
-        "adldap2/adldap2"               : "~6.0",
-        "symfony/config"                : "~2.3|~3.0",
-        "symfony/dependency-injection"  : "~2.3|~3.0",
-        "symfony/http-kernel"           : "~2.3|~3.0"
+        "php"                           : ">=5.5.9",
+        "adldap2/adldap2"               : "~7.0",
+        "symfony/config"                : "~2.8|~3.0",
+        "symfony/dependency-injection"  : "~2.8|~3.0",
+        "symfony/http-kernel"           : "~2.8|~3.0"
     },
     "extra": {
         "branch-alias": {
