@@ -20,6 +20,8 @@ class Adldap2Extension extends Extension
         $connectionSettings = $config['connection_settings'];
         if (!empty($connectionSettings['account_suffix'])) {
             $connectionSettings['account_suffix'] = '@'.$connectionSettings['account_suffix'];
+        } else {
+            unset($connectionSettings['account_suffix']);
         }
 
         $service = $container->register('adldap2', Adldap::class);

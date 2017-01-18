@@ -19,8 +19,8 @@ class Adldap2Factory
     public static function createConnection(array $config)
     {
         $ad = new Adldap();
-        $ad->addProvider('default', new Provider($config));
-        $ad->connect('default');
+        $ad->addProvider(new Provider($config));
+        $ad->connect();
 
         return $ad;
     }
