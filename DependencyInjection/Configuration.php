@@ -38,7 +38,7 @@ class Configuration implements ConfigurationInterface
                         ->end()
                         ->scalarNode('admin_password')
                             ->isRequired()
-                            ->cannotBeEmpty
+                            ->cannotBeEmpty()
                         ->end()
                         ->booleanNode('follow_referrals')
                             ->defaultFalse()
