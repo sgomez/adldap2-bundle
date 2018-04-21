@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('domain_controllers')
                             ->prototype('scalar')->end()
                             ->isRequired()
-                            ->cannotBeEmpty()
+                            ->requiresAtLeastOneElement()
                         ->end()
                         ->integerNode('port')
                         ->end()
