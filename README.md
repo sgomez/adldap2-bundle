@@ -34,14 +34,12 @@ public function registerBundles()
 ### Step 3: Configure the bundle
 
 You need to configure your connection. The parameters are the same that use
- [Adldap2](https://github.com/Adldap2/Adldap2/blob/v5.2/docs/CONFIGURATION.md).
+ [Adldap2](https://github.com/Adldap2/Adldap2/blob/v7.0/docs/configuration.md).
  
 This is a sample configuration that you need to add in the `app/config/config.yml` file:
 
 ```yaml
 adldap2:
-    auto_connect: true
-    connection_class: Adldap\Connections\Ldap
     connection_settings:
         domain_controllers: ["domain_controller_1", "domain_controller_2"]
         base_dn: "dc=domain,dc=com"
@@ -53,14 +51,17 @@ adldap2:
         use_ssl: false
         use_tls: false
         use_sso: false
-
+        auto_connect: true
 ```
 
 You don't need to configure all values. See the original adldap2 documentation for more information.
 
+**_Note:_** `auto_connect` configuration option is not part of the adldap2 library but instead an option for this bundle 
+ to configure whether you want the 'adldap2' service to automatically connect on application boot or not. 
+
 ### Step 4: Profit!
 
-A new service called 'adldap2' has been created. It's a configured instance of [Adldap](https://github.com/Adldap2/Adldap2/blob/v5.2/src/Adldap.php)
+A new service called 'adldap2' has been created. It's a configured instance of [Adldap](https://github.com/Adldap2/Adldap2/blob/v7.0/src/Adldap.php)
  class. You can use it as usual:
  
 ```yaml
@@ -73,6 +74,9 @@ class DefaultController extends Controller
     }
 }
 ```
+
+**_Note:_** if you have `auto_connect: false` in your adldap2 configuration you will need to manually call `connect()` 
+ before you can perform any queries on the library. 
 
 ## TODO
 

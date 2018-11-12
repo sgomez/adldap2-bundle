@@ -50,7 +50,7 @@ class Configuration implements ConfigurationInterface
                             ->defaultFalse()
                         ->end()
                         ->booleanNode('auto_connect')
-                            ->defaultFalse()
+                            ->defaultTrue()
                         ->end()
                     ->end()
                 ->end()
