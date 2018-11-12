@@ -18,9 +18,17 @@ class Adldap2Factory
 {
     public static function createConnection(array $config)
     {
+        $autoConnect = isset($config['auto_connect']) ? $config['auto_connect'] : false;
+        // We have to remove the `auto_connect` param here because the Adldap2 library
+        // will thrown an exception because the config option doesn't exist.
+        unset($config['auto_connect']);
+
         $ad = new Adldap();
         $ad->addProvider(new Provider($config));
-        $ad->connect();
+
+        if (true === $autoConnect) {
+            $ad->connect();
+        }
 
         return $ad;
     }

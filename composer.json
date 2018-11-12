@@ -10,14 +10,16 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Sgomez\\Bundle\\Adldap2Bundle\\": "" }
+        "psr-4": {
+            "Sgomez\\Bundle\\Adldap2Bundle\\": ""
+        }
     },
     "require": {
-        "php"                           : ">=5.5.9",
-        "adldap2/adldap2"               : "~7.0",
-        "symfony/config"                : "^3.4|^4.0",
-        "symfony/dependency-injection"  : "^3.4|^4.0",
-        "symfony/http-kernel"           : "^3.4|^4.0"
+        "php": ">=5.5.9",
+        "adldap2/adldap2": "~7.0",
+        "symfony/config": "^3.4|^4.0",
+        "symfony/dependency-injection": "^3.4|^4.0",
+        "symfony/http-kernel": "^3.4|^4.0"
     },
     "extra": {
         "branch-alias": {
